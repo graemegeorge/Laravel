@@ -34,10 +34,9 @@
 
 Route::get('/', function()
 {
-	$view = View::make('home.index');
-	$view->greeting = "hi";
-	
-	return $view;
+	return View::make('home.index', array(
+		'items' => array('item1', 'item2', 'item3', 'item4')
+	));
 });
 
 /*
