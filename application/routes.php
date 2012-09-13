@@ -2,8 +2,11 @@
 
 Route::get('/', function()
 {
-	$title = DB::only('SELECT title FROM posts WHERE id = 1');
-	return $title;
+	$posts = DB::table('posts')
+				->where('id', '!=', 1)
+				->get();
+				
+	dd($posts);
 });
 
 /*
