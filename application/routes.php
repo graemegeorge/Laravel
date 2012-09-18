@@ -2,18 +2,22 @@
 
 Route::get('/', function()
 {
-
 	/*
-		Dynamic sql: WHERE_title_AND_body('title_content', 'body_content')		
+	$user = new User;
+	$user->email = 'jane@doe.com';
+	$user->password = Hash::make('1234');
+	$user->save();
 	*/
 	
-	$posts = DB::table('posts')
-				->where_title_and_body('My title', 'the body of my post')
-				->order_by('title', 'asc')
-				->take(2)
-				->get();
-				
-	dd($posts);
+	$user = User::create(
+		array (
+			'email' 	=> 'chuck@doe.com',
+			'password' 	=> Hash::make(1234)
+		)
+	);
+	
+	if ( $user ) return 'Success!';
+	
 });
 
 /*
