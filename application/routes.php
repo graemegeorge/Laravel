@@ -3,16 +3,11 @@
 Route::get('/', function()
 {
 	
-	$user = User::create(
-		array (
-			'email' 	=> 'chuck@doe.com',
-			'password' 	=> Hash::make(1234)
-		)
-	);
-	
-	if ( $user ) return 'Success!';
+	// some content
 	
 });
+
+
 
 /*
 |--------------------------------------------------------------------------
