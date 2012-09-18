@@ -2,12 +2,6 @@
 
 Route::get('/', function()
 {
-	/*
-	$user = new User;
-	$user->email = 'jane@doe.com';
-	$user->password = Hash::make('1234');
-	$user->save();
-	*/
 	
 	$user = User::create(
 		array (
