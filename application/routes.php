@@ -3,7 +3,7 @@
 Route::get('/', function()
 {
 	
-	// hello test
+	// hello test2
 	
 });
 
