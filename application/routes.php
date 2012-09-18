@@ -3,7 +3,7 @@
 Route::get('/', function()
 {
 	
-	// some content
+	
 	
 });
 
