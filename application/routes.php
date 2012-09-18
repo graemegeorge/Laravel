@@ -2,8 +2,15 @@
 
 Route::get('/', function()
 {
+
+	/*
+		Dynamic sql: WHERE_title_AND_body('title_content', 'body_content')		
+	*/
+	
 	$posts = DB::table('posts')
-				->where('id', '!=', 1)
+				->where_title_and_body('My title', 'the body of my post')
+				->order_by('title', 'asc')
+				->take(2)
 				->get();
 				
 	dd($posts);
