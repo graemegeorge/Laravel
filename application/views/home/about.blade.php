@@ -1,5 +1,5 @@
 @layout('master')
 
 @section('main')
-	<h1>Home</h1>
+	<h2>About</h2>
 @endsection

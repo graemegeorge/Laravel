@@ -1,13 +1,15 @@
 <?php
 
-Route::get('/', function()
-{
+//Route::get('/', 'home@index');
+//Route::get('about', 'home@about');
 
-	
-	
-});
+//Route::controller('home');
+//Route::controller('users');
 
+// or... 
+// Route::controller(array('home', 'users'));
 
+Route::controller(Controller::detect());
 
 /*
 |--------------------------------------------------------------------------
